@@ -82,10 +82,11 @@ p {
   box-shadow: 0 2px 1px rgba(255, 255, 255, 0.5);
 }
 
-#submit-btn .fa-paper-plane {
+#submit-btn .fa-paper-plane,
+#submit-btn .fa-play {
   display: inline-block;
   font-size: 1.10rem;
-  margin-left: 0.25rem;
+  margin-left: 0.5rem;
 }
 
 .won,

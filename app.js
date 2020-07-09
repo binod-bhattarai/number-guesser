@@ -37,7 +37,7 @@ submitBtn.addEventListener('click', function () {
       won.style.display = 'flex';
       guess.style.border = '1px solid #5cb85c';
       guess.disabled = 'true';
-      submitBtn.firstChild.textContent = 'Play Again?';
+      submitBtn.innerHTML = `Play Again?<i class="fas fa-play"></i>`;
       guess.placeholder = 'Congratulations!';
     } else {
       guessCount--;
@@ -50,7 +50,7 @@ submitBtn.addEventListener('click', function () {
         lost.style.display = 'flex';
         guess.style.border = '1px solid #d9534f';
         guess.disabled = 'true';
-        submitBtn.firstChild.textContent = 'Play Again?';
+        submitBtn.innerHTML = `Play Again?<i class="fas fa-play"></i>`;
         guess.placeholder = 'Sorry!';
       }
     }
