@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.023rem;
+  word-spacing: 0.05rem;
+}
+
+html,
+body {
+  background-color:	#333333;
+  color: #f9f9f9;
+}
+
+.container {
+  max-width: 425px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.15rem;
+  margin-bottom: 0.95rem;
+}
+
+.lower-num {
+  background-color:#979aaa;
+  border-radius: 15px;
+  padding: 0.15rem;
+  color: #333333;
+  font-weight: bold;
+}
+
+.upper-num {
+  background-color:#979aaa;
+  border-radius: 15px;
+  padding: 0.15rem;
+  color: #333333;
+  font-weight: bold;
+}
+
+#guess {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem 1.25rem;
+  background-color:	#343d46;
+  font-size: 1.05rem;
+  color: inherit;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+::placeholder {
+  color:#c0c5ce;
+}
+
+#submit-btn {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem 1.25rem;
+  background-color:	#004c4c;
+  color: inherit;
+  font-size: 1.05rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+#submit-btn:hover {
+  background-color:	#006666;
+  box-shadow: 0 2px 1px rgba(255, 255, 255, 0.5);
+}
+
+#submit-btn .fa-paper-plane {
+  display: inline-block;
+  font-size: 1.10rem;
+  margin-left: 0.25rem;
+}
+
+.won,
+.lost {
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem 0.5rem;
+  border-radius: 2.5px;
+  background-color: #5cb85c;
+  text-align: center;
+  margin-top: 5rem;
+  transition: all 2s;
+  font-size: 1.35rem;
+}
+
+.lost {
+  background-color: #d9534f;
+}
+
+.fas {
+  font-size: 1.75rem;
+}
+
+.fa-trophy {
+  color:#a67c00;
+}
+
+/* Won animation */
+.won-animation {
+  animation: won 1.15s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes won {
+  from {
+    transform: scale(0, 0) rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* lost animation */
+.lost-animation {
+  animation: lost 1.15s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lost {
+  from {
+    transform: scale(0, 0) rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* info message appearing animation */
+.info-msg {
+  line-height: 1.6;
+  display: none;
+  animation: infomsg 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes infomsg {
+  from {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+#guess::-webkit-inner-spin-button,
+#guess::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* you win color #317256; */
